@@ -7,6 +7,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 
+
 const Content = () => {
   const pagination = {
     clickable: true,
