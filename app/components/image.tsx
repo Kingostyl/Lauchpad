@@ -27,7 +27,7 @@ const images: React.FC<ImageProps> = ({ src, alt, width, height, caption }) => {
     <button className={`cursor-default ${animate ? "animate-ping" : ""}`} onClick={onClikAnimate} >
       <picture className="inline text-center">
         <Image src={src} alt={alt} width={width} height={height} />
-        {caption && <p className="font-normal text-xs">{caption}</p>}
+        {caption && <p className="font-normal drop-shadow shadow-black/40 text-xs">{caption}</p>}
       </picture>
     </button>
   );

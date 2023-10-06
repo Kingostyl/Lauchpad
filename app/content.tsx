@@ -35,13 +35,13 @@ const Content = () => {
 
   return (
     <>
-      <header className="relative z-50 flex justify-center top-2 bottom-10 right-0 left-0">
+      <header className="relative z-50 flex justify-center top-3 bottom-10 right-0 left-0">
         <nav>
-          <div className="relative">
-            <span className="absolute fill-white centered-input inset-y-0 left-2 flex items-center pl-0">
+          <div className="relative w-64">
+            <span className="fill-white absolute top-0 bottom-0 items-center flex left-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="15px"
+                width="14px"
                 height="44px"
                 viewBox="0 0 15 44"
               >
@@ -55,7 +55,7 @@ const Content = () => {
               placeholder="Search"
               value={searchlauchpad}
               onChange={changeSearch}
-              className="pl-8 outline-none inpt-sch font-light bg-slate-800/5 border-[1.2px] border-white/40 rounded-md"
+              className="pl-8 outline-none inpt-sch font-light bg-slate-800/5 border-[1.1px] border-white/40 rounded-md"
             />
           </div>
         </nav>
@@ -68,6 +68,7 @@ const Content = () => {
           mousewheel={true}
           direction={"horizontal"}
           className="mySwiper"
+          speed={1000}
         >
           {filteredData.length === 0 ? (
             <p className="fixed left-0 right-0 font-extralight text-white/50 text-7xl top-0 bottom-0 flex justify-center items-center">
@@ -76,7 +77,7 @@ const Content = () => {
           ) : (
             <>
               <SwiperSlide>
-                <section className="grid grid-cols-7 gap-y-6 p-5 justify-items-center">
+                <section className="grid grid-cols-7 gap-y-6 pt-6 mx-10  items-baseline justify-items-center">
                   {isSearching
                     ? filteredData.map((image, index) => (
                         <Images
@@ -103,7 +104,7 @@ const Content = () => {
                 </section>
               </SwiperSlide>
               <SwiperSlide>
-                <section className="grid grid-cols-7 gap-y-6 p-5 justify-items-center">
+                <section className="grid grid-cols-7 gap-y-6 p-5 mx-10 justify-items-center">
                   {isSearching
                     ? filteredData.map((image, index) => (
                         <Images
