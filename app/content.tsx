@@ -66,7 +66,7 @@ const Content = () => {
           pagination={isSearching ? false : pagination}
           modules={[Pagination, Mousewheel]}
           mousewheel={true}
-          direction={'horizontal'}
+          direction={"horizontal"}
           className="mySwiper"
         >
           {filteredData.length === 0 ? (
@@ -135,6 +135,6 @@ const Content = () => {
       </main>
     </>
   );
-}
+};
 
 export default Content;

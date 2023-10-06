@@ -34,6 +34,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+  "types": [
+    "animejs"
+  ],
   "exclude": [
     "node_modules"
   ]
