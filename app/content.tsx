@@ -65,7 +65,7 @@ const Content = () => {
         <Swiper
           pagination={isSearching ? false : pagination}
           modules={[Pagination, Mousewheel]}
-          mousewheel={true}
+          mousewheel={!isSearching}
           direction={"horizontal"}
           className="mySwiper"
           speed={1000}
@@ -104,19 +104,19 @@ const Content = () => {
                 </section>
               </SwiperSlide>
               <SwiperSlide>
-                <section className="grid grid-cols-7 gap-y-6 p-5 mx-10 justify-items-center">
+                <section  className="grid grid-cols-7 gap-y-6 p-5 mx-10 justify-items-center">
                   {isSearching
                     ? filteredData.map((image, index) => (
-                        <Images
-                          key={index}
-                          src={image.src}
-                          alt={image.alt}
-                          priority
-                          width={90}
-                          height={90}
-                          caption={image.caption}
-                        />
-                      ))
+                      <Images
+                        key={index}
+                        src={image.src}
+                        alt={image.alt}
+                        priority
+                        width={90}
+                        height={90}
+                        caption={image.caption}
+                      />
+                    ))
                     : page2Data.map((image, index) => (
                         <Images
                           key={index}
