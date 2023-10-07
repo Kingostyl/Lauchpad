@@ -71,8 +71,8 @@ const Content = () => {
           speed={1000}
         >
           {filteredData.length === 0 ? (
-            <p className="fixed left-0 right-0 font-extralight text-white/50 text-7xl top-0 bottom-0 flex justify-center items-center">
-              No Result
+            <p className="fixed left-0 right-0 font-light text-white/50 text-4xl top-0 bottom-0 flex justify-center items-center">
+              No Results
             </p>
           ) : (
             <>
