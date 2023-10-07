@@ -24,12 +24,12 @@ const images: React.FC<ImageProps> = ({ src, alt, width, height, caption }) => {
     },500)
   }
   return (
-    <button className={`cursor-default ${animate ? "animate-ping" : ""}`} onClick={onClikAnimate} >
       <picture className="inline text-center">
+        <button className={`cursor-default ${animate ? "animate-ping" : ""}`} onClick={onClikAnimate} >
         <Image src={src} alt={alt} width={width} height={height} />
+        </button>
         {caption && <p className="font-normal drop-shadow shadow-black/40 text-xs">{caption}</p>}
       </picture>
-    </button>
   );
 };
 
