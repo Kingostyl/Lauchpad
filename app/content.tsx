@@ -7,7 +7,6 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 
-
 const Content = () => {
   const pagination = {
     clickable: true,
@@ -78,7 +77,7 @@ const Content = () => {
           ) : (
             <>
               <SwiperSlide>
-                <section className="grid grid-cols-7 gap-y-6 pt-6 mx-10  items-baseline justify-items-center">
+                <section className="grid grid-cols-7 relative gap-y-6 pt-6 mx-10  items-baseline justify-items-center">
                   {isSearching
                     ? filteredData.map((image, index) => (
                         <Images
